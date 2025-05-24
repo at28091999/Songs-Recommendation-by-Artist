@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Recommender</title>
+</head>
+<body>
+    <h2>Enter Artist Name</h2>
+    <form method="post">
+        <input type="text" name="artist" required>
+        <input type="submit" value="Recommend">
+    </form>
+
+    {% if recommendations %}
+        <h3>Recommendations:</h3>
+        <ul>
+        {% for song in recommendations %}
+            <li>{{ song }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
